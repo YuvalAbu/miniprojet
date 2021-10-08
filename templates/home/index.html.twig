@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello
+{% endblock %}
+
+{% block body %}
+
+	{{ form_start(surveyForm) }}
+	{{ form_row(surveyForm.title) }}
+	{{ form_row(surveyForm.active) }}
+	{{ form_row(surveyForm.domain) }}
+	{{ form_row(surveyForm.startDate) }}
+	{{ form_row(surveyForm.endDate) }}
+	{{ form_row(surveyForm.question) }}
+
+	<div class="form-group">
+		<button type="button" id="add-question" class="btn btn-primary">
+			<i class="fas fa-plus"></i>
+			Ajouter une question
+		</button>
+	</div>
+
+	<button type="submit" class="btn btn-secondary">Créer mon formulaire</button>
+
+	{{ form_end(surveyForm) }}
+
+{% endblock %}
